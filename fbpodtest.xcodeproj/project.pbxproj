@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F4873759EBE1C3718690D69 /* Pods_fbpodtest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FA298D811AE4D358F066BA /* Pods_fbpodtest.framework */; };
 		7CD75F362066B6290025C774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD75F352066B6290025C774 /* AppDelegate.swift */; };
 		7CD75F382066B6290025C774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD75F372066B6290025C774 /* ViewController.swift */; };
 		7CD75F3B2066B6290025C774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD75F392066B6290025C774 /* Main.storyboard */; };
 		7CD75F3D2066B6290025C774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD75F3C2066B6290025C774 /* Assets.xcassets */; };
 		7CD75F402066B6290025C774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD75F3E2066B6290025C774 /* LaunchScreen.storyboard */; };
+		E23CC1BD3D4464090607E8B2 /* libPods-fbpodtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B3C08FC9DD0C7C4838A924 /* libPods-fbpodtest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		42FA298D811AE4D358F066BA /* Pods_fbpodtest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbpodtest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC5152B3614406A5C043AF9 /* Pods-fbpodtest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbpodtest.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest.release.xcconfig"; sourceTree = "<group>"; };
 		7CD75F322066B6290025C774 /* fbpodtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbpodtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD75F352066B6290025C774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +25,7 @@
 		7CD75F3F2066B6290025C774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CD75F412066B6290025C774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B95141A8654A8FBCD10FD7B /* Pods-fbpodtest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbpodtest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest.debug.xcconfig"; sourceTree = "<group>"; };
+		E8B3C08FC9DD0C7C4838A924 /* libPods-fbpodtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fbpodtest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F4873759EBE1C3718690D69 /* Pods_fbpodtest.framework in Frameworks */,
+				E23CC1BD3D4464090607E8B2 /* libPods-fbpodtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		C5EB1C145E5AECF4998F6045 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42FA298D811AE4D358F066BA /* Pods_fbpodtest.framework */,
+				E8B3C08FC9DD0C7C4838A924 /* libPods-fbpodtest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,7 +99,6 @@
 				7CD75F2E2066B6290025C774 /* Sources */,
 				7CD75F2F2066B6290025C774 /* Frameworks */,
 				7CD75F302066B6290025C774 /* Resources */,
-				49FC609FCEF796B980F3803A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,26 +175,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49FC609FCEF796B980F3803A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbpodtest/Pods-fbpodtest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -234,6 +213,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -291,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -342,6 +323,7 @@
 			baseConfigurationReference = 9B95141A8654A8FBCD10FD7B /* Pods-fbpodtest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 337ZW7BQW9;
 				INFOPLIST_FILE = fbpodtest/Info.plist;
@@ -358,6 +340,7 @@
 			baseConfigurationReference = 4AC5152B3614406A5C043AF9 /* Pods-fbpodtest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 337ZW7BQW9;
 				INFOPLIST_FILE = fbpodtest/Info.plist;
